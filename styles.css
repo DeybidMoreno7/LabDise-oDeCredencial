@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #ebead3e3;
+  background-color: #e6e6caef;
   min-height: 100vh;
   padding: 20px;
   display: flex;
@@ -21,17 +21,20 @@ main{
   align-items: center;
 }
 .encabezadoPagina{
+  background-color: #3b66a7;
   text-align: center;
   padding: 35px;
   border-radius: 10px;
   width: 800px;
   border: 2px solid black;
+  color:antiquewhite
    /* margin: 0 auto;Esta linea centra la caja de mi header, el 0 es para decirle al navegador que no queremos espacio arriba ni abajo, el auto dice reparte el espacio sobrante a der e izq automáticamente */
 }
-.contenedorCredencial{
+#contenedorCredencial{
+  background-color: #7dadf7;
   width: 1000px;
-  height: 450px;
-  border: 2px solid black;
+  height: 560px;
+  border: 3px solid black;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 /*
@@ -41,6 +44,61 @@ main{
   align-items: center;
 */
 }
+#cabeceraCard{
+  color:antiquewhite;
+  background-color: #3b66a7;
+  padding: 5px;
+  text-align: center;
+  height: 50px;
+  border: 2px solid black;
+  font-weight: bold;
+}
+#contenedorFila{
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  
+}
+.cajitas{
+  padding: 15px;
+  border: 2px solid black;
+  width: 280px;
+  height: 180px;
+}
+#cajitaFoto{
+  /*border: 2px solid black;*/
+  width: 285px;
+  height: 180px;
+}
+#imagen{
+  width: 100%;  /* Ancho fijo de 300 píxeles */
+  /*max-width: 350px;*/
+  height: 260px;
+  border-radius: 15px;
+}
+#frasePersonal{
+  padding-top: 60px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+#contenedorTexto{
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+}
+.parrafo{
+  padding: 3px;
+}
+#pie{
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 
 
