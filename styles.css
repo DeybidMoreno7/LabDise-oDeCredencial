@@ -6,103 +6,151 @@
 }
 
 body {
-  background-color: #e6e6caef;
-  min-height: 100vh;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-main{
-  flex: 1;/*acá le damos todo el espacio que queda después del header, es un atajo que hace que el elemento crezca y ocupe todo el espacio sobrante dentro de un contenedor flexible*/
-  display: flex;/*centramos su contenido: la card*/
-  justify-content: center;
-  align-items: center;
-}
-.encabezadoPagina{
-  background-color: #3b66a7;
-  text-align: center;
-  padding: 35px;
-  border-radius: 10px;
-  width: 800px;
-  border: 2px solid black;
-  color:antiquewhite
-   /* margin: 0 auto;Esta linea centra la caja de mi header, el 0 es para decirle al navegador que no queremos espacio arriba ni abajo, el auto dice reparte el espacio sobrante a der e izq automáticamente */
-}
-#contenedorCredencial{
-  background-color: #7dadf7;
-  width: 1000px;
-  height: 560px;
-  border: 3px solid black;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-/*
-  
-  display: flex; ESTO CENTRA SOLO LOS ELEMENTOS HIJOS DE ESTE COMPONENTE, NO EL COMPONENTE EN SÍ MISMO.
-  justify-content: center;
-  align-items: center;
-*/
-}
-#cabeceraCard{
-  color:antiquewhite;
-  background-color: #3b66a7;
-  padding: 5px;
-  text-align: center;
-  height: 50px;
-  border: 2px solid black;
-  font-weight: bold;
-}
-#contenedorFila{
-  display: flex;
-  justify-content: space-between;
-  padding: 25px;
-  
-}
-.cajitas{
-  padding: 15px;
-  /*border: 2px solid black;*/
-  width: 280px;
-  height: 180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#cajitaFoto{
-  /*border: 2px solid black;*/
-  width: 285px;
-  height: 180px;
-}
-#imagen{
-  width: 100%;  /* Ancho fijo de 300 píxeles */
-  /*max-width: 350px;*/
-  height: 260px;
-  border-radius: 15px;
-}
-#frasePersonal{
-  padding-top: 60px;
-  text-align: center;
-  font-weight: bold;
-  font-style: italic;
-}
-#contenedorTexto{
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-}
-.parrafo{
-  padding: 3px;
-}
-#pie{
-  flex:1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
+    background-color: #e6e6caef;
+    min-height: 100vh; /*  100vh para que se ajuste al alto real de la pantalla */
+    padding: 20px 10px; /* 20 en x 10 en y */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px; /* Crea un espacio limpio entre Header, Main y Footer */
 }
 
+main {
+    flex: 1;/*acá le damos todo el espacio que queda después del header, es un atajo que hace que el elemento crezca y ocupe todo el espacio sobrante dentro de un contenedor flexible*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Asegura que el main aproveche el ancho disponible */
+}
 
+.encabezadoPagina {
+    background-color: #3b66a7;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px; /* No pasa de 800px en PC, pero se encoge en celulares */
+    border: 2px solid black;
+    color: antiquewhite;
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
+}
+
+#contenedorCredencial {
+    background-color: #7dadf7;
+    
+    /* CAMBIO CLAVE: Ancho fluido y altura automática */
+    width: 100%;
+    max-width: 1000px; 
+    min-height: 610px; /* En lugar de height: 610px, le damos altura MÍNIMA para que pueda crecer si es necesario */
+    
+    border: 3px solid black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-bottom: 20px;
+}
+
+#cabeceraCard {
+    color: antiquewhite;
+    background-color: #3b66a7;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid black;
+    font-weight: bold;
+}
+#contenedorFila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    gap: 15px;
+}
+
+.cajitas {
+    padding: 15px;
+    width: 100%;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cajitaFoto {
+    width: 100%;
+    max-width: 285px;
+    display: flex;
+    justify-content: center;
+}
+
+#imagen {
+    width: 100%;
+    max-width: 280px;
+    height: auto; 
+    max-height: 260px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+#frasePersonal {
+    padding-top: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#contenedorTexto {
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#firma {
+    width: 200px;
+    height: auto;
+    padding: 0;
+}
+
+.parrafo {
+    padding: 3px;
+    text-align: center;
+}
+
+#pie {
+    border: 2px solid black; 
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: #3b66a7;
+    color: antiquewhite;
+}
+
+   /*MEDIA QUERY: ESTILOS PARA PANTALLAS PEQUEÑAS (MÓVILES)*/
+@media (max-width: 768px) {
+    
+    /* Cambiamos la fila a columna para que los elementos se apilen verticalmente */
+    #contenedorFila {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    /* La foto se posiciona primero en móviles para dar mejor jerarquía visual */
+    #cajitaFoto {
+        order: -1; 
+    }
+
+    .encabezadoPagina h1 {
+        font-size: 1.4rem; /* Reducimos ligeramente el título en celulares */
+    }
+
+    #contenedorCredencial {
+        border-radius: 15px; /* Bordes suaves en móvil */
+    }
+}
